@@ -7,18 +7,22 @@ if (de >= ate) {
       alert ('Não é possível adicionar um número maior no campo "Do número" que "Até o número"');
       return;
 }
-
+if (quantidade > (ate - de + 1)) {
+    alert('Campo "Quantidade" deve ser menor ou igual ao intervalo informado no campo "Do número" até o campo "Até o número". Verifique!');
+    return;
+  }
       let sorteados = [];
       let numero; 
       
       for (let i = 0; i < quantidade; i++) {
-      numero = obterNumeroAleatorio(de, ate);
+    numero = obterNumeroAleatorio(de, ate);
 
-      while (sorteados.includes(numero)){
-            numero = obterNumeroAleatorio(de, ate);
+    while (sorteados.includes(numero)) {
+      numero = obterNumeroAleatorio(de, ate);
+     
 }
 
-      sorteados.push (numero); 
+    sorteados.push(numero);
 }
     let resultado = document.getElementById ('resultado');
     resultado.innerHTML = `<label class="texto__paragrafo"> Números sorteados ${sorteados}</label>`
