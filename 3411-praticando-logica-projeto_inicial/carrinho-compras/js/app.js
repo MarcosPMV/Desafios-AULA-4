@@ -25,3 +25,6 @@ totalGeral = 0;
 document.getElementById('lista-produtos').innerHTML = '' ;
 document.getElementById ('valor-total').innerHTML = 'R$ 0';
 }
+// Adicione validações no código para garantir que o usuário só consiga adicionar produtos ao carrinho se tiver selecionado um produto válido e inserido uma quantidade válida.
+// Se a entrada não for válida, exiba uma mensagem de erro apropriada.
+
