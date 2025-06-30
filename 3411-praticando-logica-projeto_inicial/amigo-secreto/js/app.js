@@ -1,17 +1,17 @@
 let amigos = [];
 
 function adicionar() {
-
-    let amigo = document.getElementById('nome-amigo');
-    if (amigo.value == ''){
+ let amigo = document.getElementById('nome-amigo');
+    if (amigo == ''){
         alert ('Adicione um nome.');
         return;
     }
+
     if (amigos.includes(amigo.value)) {
     alert(`O nome ${amigo.value} já foi escolhido.`);
     return;
   } 
-  
+
   let lista = document.getElementById('lista-amigos'); 
     amigos.push(amigo.value);
 
